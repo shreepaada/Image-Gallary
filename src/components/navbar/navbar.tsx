@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import styles from "./Navbar.module.css"; // Importing CSS module for animation
+import styles from "./navbar.module.css"; // Importing CSS module for animation
 
 const Navbar: React.FC = () => {
   return (
