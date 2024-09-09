@@ -1,0 +1,62 @@
+/* Navbar.module.css */
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centers the heading horizontally */
+    align-items: center; /* Centers the heading vertically */
+    background-color: #fff;
+    padding: 10px;
+    height: 50px; /* Reduced height of the navbar */
+    overflow: hidden;
+  }
+  
+  .heading {
+    color: #000;
+    font-size: 8px; /* Reduced font size */
+    font-weight: bold;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Matching the height of the navbar */
+    z-index: 0;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%);
+    overflow: hidden;
+  }
+  
+  .particles::before,
+  .particles::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(0,0,0,0.1) 10%, transparent 60%);
+    animation: animateParticles 15s linear infinite;
+  }
+  
+  .particles::after {
+    animation-delay: 7.5s;
+  }
+  
+  @keyframes animateParticles {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-50px) scale(1.5);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(-100px) scale(2);
+      opacity: 0;
+    }
+  }
+  
